@@ -1,6 +1,6 @@
 package entities ;
 
-import static utilz.Constants.EnemyConstants;
+import static utilz.Constants.EnemyConstants.* ;
 public abstract class Enemy extends Entity {
     private  int aniIndex, enemyState, enemyType;
     private  int aniTick, aniSpeed = 25;
@@ -15,7 +15,7 @@ private void updateAnimationTick(){
   if(aniTick>= aniSpeed){
      aniTick = 0; 
      aniIndex ++;
-     if (aniIndex >= 999){
+     if (aniIndex >= GetSpriteAmount(enemyType, enemyState)){
        aniIndex = 0 ;
      }
   }
