@@ -4,10 +4,13 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 
 import main.Game;
+import entities.Crabby;
+import static utilz.Constants.EnemyConstants.CRABBY;
 
 // Клас LoadSave містить методи для завантаження ресурсів гри, таких як спрайти та дані рівнів.
 public class LoadSave {
@@ -38,6 +41,21 @@ public class LoadSave {
         return img;
     }
 
+    public static  ArrayList<Crabby> GetCrabs(){
+            BufferedImage img = GetSpriteAtlas(LEVEL_ONE_DATA);
+        ArrayList<Crabby> list = new ArrayList<>();
+               for (int j = 0; j < img.getHeight(); j++)
+            for (int i = 0; i < img.getWidth(); i++) {
+                // Отримання кольору пікселя.
+                Color color = new Color(img.getRGB(i, j));
+                int value = color.getGreen(); // Використання червоного каналу для збереження даних.
+                if (value == CRABBY)
+                  list.add(new Crabby(i * Game.TILES SIZE, j* Game.TILES_SIZE)):
+            }
+        return list: 
+        
+    }
+    
     // Метод для отримання даних рівня з зображення.
     public static int[][] GetLevelData() {
         // Ініціалізація масиву для зберігання даних рівня.
