@@ -5,9 +5,14 @@ import java.awt.Graphics;
 import entities.Player;
 import levels.LevelManager;
 
+import gamestates.Menu;
+import gamestates.Playing;
+
 // Клас Game реалізує інтерфейс Runnable, що дозволяє запускати його в окремому потоці.
 public class Game implements Runnable {
 
+
+    
     // Змінні для вікна гри, панелі гри, потоку гри, FPS та UPS.
     private GameWindow gameWindow;
     private GamePanel gamePanel;
@@ -16,6 +21,8 @@ public class Game implements Runnable {
     private final int UPS_SET = 200; // Фіксована кількість оновлень на секунду.
   /*  private Player player; // Гравець у грі.
     private LevelManager levelManager; // Менеджер рівнів. */
+private Playing  playing;
+private Menu menu;
 
     // Константи, що визначають розмір плиток та розмір гри.
     public final static int TILES_DEFAULT_SIZE = 32;
