@@ -42,9 +42,9 @@ public class Game implements Runnable {
 
     // Метод для ініціалізації класів гравця та менеджера рівнів.
     private void initClasses() {
-        levelManager = new LevelManager(this);
+    /*    levelManager = new LevelManager(this);
         player = new Player(200, 200, (int) (64 * SCALE), (int) (40 * SCALE));
-        player.loadLvlData(levelManager.getCurrentLevel().getLevelData());
+        player.loadLvlData(levelManager.getCurrentLevel().getLevelData());*/
     }
 
     // Метод для запуску ігрового циклу в окремому потоці.
