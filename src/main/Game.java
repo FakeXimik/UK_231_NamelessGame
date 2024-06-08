@@ -57,12 +57,31 @@ public class Game implements Runnable {
     public void update() {
         levelManager.update();
         player.update();
+      /*  switch(Gamestate.state){
+            case MENU:
+                menu.update();
+                break
+            case PLAYING :
+                 levelManager.update();
+                 player.update();
+            dafeult :
+            break;*/
+        }
     }
 
     // Метод для відображення графіки гри.
     public void render(Graphics g) {
         levelManager.render(g);
         player.render(g);
+      /*  switch(Gamestate.state){
+            case MENU:
+                menu.update();
+                break
+            case PLAYING :
+                 levelManager.render(g);
+                 player.render(g);
+            dafeult :
+            break;*/
     }
 
     // Метод run, який реалізує ігровий цикл.
