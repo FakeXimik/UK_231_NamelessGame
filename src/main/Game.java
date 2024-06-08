@@ -135,12 +135,12 @@ public class Game implements Runnable {
 
     // Метод, який викликається, коли вікно гри втрачає фокус.
     public void windowFocusLost() {
-        player.resetDirBooleans();
+//        player.resetDirBooleans();
     }
 
     // Метод для отримання об'єкту гравця.
-    public Player getPlayer() {
-        return player;
+  /*  public Player getPlayer() {
+        return player;*/
     }
 
 }
