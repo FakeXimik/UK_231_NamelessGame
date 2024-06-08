@@ -14,8 +14,8 @@ public class Game implements Runnable {
     private Thread gameThread;
     private final int FPS_SET = 144; // Фіксована кількість кадрів на секунду.
     private final int UPS_SET = 200; // Фіксована кількість оновлень на секунду.
-    private Player player; // Гравець у грі.
-    private LevelManager levelManager; // Менеджер рівнів.
+  /*  private Player player; // Гравець у грі.
+    private LevelManager levelManager; // Менеджер рівнів. */
 
     // Константи, що визначають розмір плиток та розмір гри.
     public final static int TILES_DEFAULT_SIZE = 32;
