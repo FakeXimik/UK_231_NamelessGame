@@ -55,9 +55,9 @@ public class Game implements Runnable {
 
     // Метод для оновлення стану гри.
     public void update() {
-        levelManager.update();
+      /*  levelManager.update();
         player.update();
-      /*  switch(Gamestate.state){
+        switch(Gamestate.state){
             case MENU:
                 menu.update();
                 break
@@ -71,9 +71,9 @@ public class Game implements Runnable {
 
     // Метод для відображення графіки гри.
     public void render(Graphics g) {
-        levelManager.render(g);
+      /*  levelManager.render(g);
         player.render(g);
-      /*  switch(Gamestate.state){
+       switch(Gamestate.state){
             case MENU:
                 menu.update();
                 break
