@@ -30,6 +30,16 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
     //я перенёсь это в гаме стеит 
         /*    if (e.getButton() == MouseEvent.BUTTON1)
             gamePanel.getGame().getPlayer().setAttacking(true);*/
+        switch(Gamestate.state){
+            case MENU :
+                
+                break;
+            case PLAYING:
+                break;
+            default:
+                break;
+                
+        }
 
     }
 
