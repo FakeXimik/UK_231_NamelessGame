@@ -38,8 +38,18 @@ public class KeyboardInputs implements KeyListener {
                 gamePanel.getGame().getPlayer().setJump(false);
                 break;
         }*/
+        //перенёс в gamestate 
         switch(Gamestate.state){
+            case MENU :
+                gamePanel.getGame().getMenu().keyReleased(e);
+                break;
+            case PLAYING:
+                  gamePanel.getGame().getPlaying().keyReleased(e);
+                break;
+            default:
+                break;
                 
+        }   
         }
     }
 
