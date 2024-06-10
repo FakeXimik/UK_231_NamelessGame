@@ -19,6 +19,7 @@ public class LoadSave {
     public static final String PLAYER_ATLAS = "player_sprite.png";
     public static final String LEVEL_ATLAS = "level_sprite.png";
     public static final String LEVEL_ONE_DATA = "level_one_data.png";
+    public static final String CRABBY_SPRITE = "crabby_sprite.png";
 
     // Метод для завантаження зображення спрайту з файлу.
     public static BufferedImage GetSpriteAtlas(String fileName) {
