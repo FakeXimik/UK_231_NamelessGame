@@ -20,7 +20,8 @@ public class KeyboardInputs implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
-        switch (e.getKeyCode()) {
+      // я перенёс в Playing , после тестов перед презентацией удалить 
+        /* switch (e.getKeyCode()) {
 //		case KeyEvent.VK_W:
 //			gamePanel.getGame().getPlayer().setUp(false);
 //			break;
@@ -36,7 +37,7 @@ public class KeyboardInputs implements KeyListener {
             case KeyEvent.VK_SPACE:
                 gamePanel.getGame().getPlayer().setJump(false);
                 break;
-        }
+        }*/
     }
 
     @Override
