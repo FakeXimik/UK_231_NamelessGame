@@ -38,6 +38,9 @@ public class KeyboardInputs implements KeyListener {
                 gamePanel.getGame().getPlayer().setJump(false);
                 break;
         }*/
+        switch(Gamestate.state){
+                
+        }
     }
 
     @Override
