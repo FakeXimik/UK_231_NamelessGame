@@ -52,6 +52,8 @@ private Menu menu;
     /*    levelManager = new LevelManager(this);
         player = new Player(200, 200, (int) (64 * SCALE), (int) (40 * SCALE));
         player.loadLvlData(levelManager.getCurrentLevel().getLevelData());*/
+        menu = new Menu(this);
+        playing = new Playing(this);
     }
 
     // Метод для запуску ігрового циклу в окремому потоці.
@@ -62,33 +64,38 @@ private Menu menu;
 
     // Метод для оновлення стану гри.
     public void update() {
-      /*  levelManager.update();
+      levelManager.update();
         player.update();
         switch(Gamestate.state){
             case MENU:
                 menu.update();
                 break
             case PLAYING :
-                 levelManager.update();
+                playing.update();
+                levelManager.update();
                  player.update();
             dafeult :
-            break;*/
+            break;
+        
         }
     }
 
     // Метод для відображення графіки гри.
     public void render(Graphics g) {
-      /*  levelManager.render(g);
+        levelManager.render(g);
         player.render(g);
        switch(Gamestate.state){
             case MENU:
-                menu.update();
+                menu.update(); //возможно придёться удалиь
+               menu.draw(g)
                 break
             case PLAYING :
                  levelManager.render(g);
                  player.render(g);
+                 playing.draw(g);
+               break;
             dafeult :
-            break;*/
+            break;
     }
 
     // Метод run, який реалізує ігровий цикл.
@@ -143,6 +150,8 @@ private Menu menu;
     // Метод, який викликається, коли вікно гри втрачає фокус.
     public void windowFocusLost() {
 //        player.resetDirBooleans();
+    if(Gamestate.state == Gamestate.PLAYING)
+        playing.getPlayer().resetDirBooleans();    
     }
 
     // Метод для отримання об'єкту гравця.
