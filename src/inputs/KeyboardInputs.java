@@ -55,7 +55,7 @@ public class KeyboardInputs implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        switch (e.getKeyCode()) {
+     /*   switch (e.getKeyCode()) {
 //		case KeyEvent.VK_W:
 //			gamePanel.getGame().getPlayer().setUp(true);
 //			break;
@@ -71,6 +71,16 @@ public class KeyboardInputs implements KeyListener {
             case KeyEvent.VK_SPACE:
                 gamePanel.getGame().getPlayer().setJump(true);
                 break;
+        }*/
+            switch(Gamestate.state){
+            case MENU :
+                gamePanel.getGame().getMenu().keyPressed(e);
+                break;
+            case PLAYING:
+                  gamePanel.getGame().getPlaying().keyPressed(e);
+                break;
+            default:
+                break;
+               
         }
-    }
 }
