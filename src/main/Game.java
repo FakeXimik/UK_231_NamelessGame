@@ -149,5 +149,10 @@ private Menu menu;
   /*  public Player getPlayer() {
         return player;*/
     }
-
+public  Menu getMenu(){
+    return Menu;
+    }    
+public Playing getPlaying(){
+    return playing;
+    }
 }
