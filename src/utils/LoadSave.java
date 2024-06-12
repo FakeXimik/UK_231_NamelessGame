@@ -49,7 +49,7 @@ public class LoadSave {
             for (int i = 0; i < img.getWidth(); i++) {
                 // Отримання кольору пікселя.
                 Color color = new Color(img.getRGB(i, j));
-                int value = color.getGreen(); // Використання червоного каналу для збереження даних.
+                int value = color.getGreen(); // Використання зеленог каналу для збереження даних.
                 if (value == CRABBY)
                   list.add(new Crabby(i * Game.TILES SIZE, j* Game.TILES_SIZE)):
             }
