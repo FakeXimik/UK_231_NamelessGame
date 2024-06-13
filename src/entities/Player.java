@@ -45,6 +45,7 @@ public class Player extends Entity {
     public void render(Graphics g) {
         // Відображення поточного спрайту гравця згідно з анімацією.
         g.drawImage(animations[playerAction][aniIndex], (int) (hitbox.x - xDrawOffset), (int) (hitbox.y - yDrawOffset), width, height, null);
+   // drawHitbox(g, xLvlOffset);
     }
 
     // Метод для оновлення таймера анімації.
