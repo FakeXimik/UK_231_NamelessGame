@@ -21,9 +21,9 @@ public abstract class Entity {
     }
 
     // Метод для відображення хітбоксу об'єкта (для відладки).
-    protected void drawHitbox(Graphics g) {
+    protected void drawHitbox(Graphics g, int xLvlOffset) {
         g.setColor(Color.PINK);
-        g.drawRect((int) hitbox.x, (int) hitbox.y, (int) hitbox.width, (int) hitbox.height);
+        g.drawRect((int) hitbox.x - xLvlOffset, (int) hitbox.y, (int) hitbox.width, (int) hitbox.height);
     }
 
     // Метод для ініціалізації хітбоксу об'єкта з вказаними параметрами.
